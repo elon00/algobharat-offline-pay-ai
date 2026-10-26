@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "algobharat-offline-pay-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "Algorand",
+        "PROJECT_TICKER": "ABOFF"
+      },
+      "tools": [
+        {
+          "name": "verify_aboff_invariants",
+          "description": "Verifies deterministic invariants for AlgoBharat Offline Pay AI on Algorand."
+        },
+        {
+          "name": "execute_aboff_action",
+          "description": "Executes authenticated Payments state transition."
+        }
+      ]
+    }
+  }
+}
